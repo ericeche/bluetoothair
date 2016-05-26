@@ -47,6 +47,19 @@ Build Preparations
 
 The build system must know where it can find the Android SDK and NDK. Therefor copy the `local.properties.example` file,  name it `local.properties` and adjust the content of the file.
 
+    
+	cp local.properties.example local.properties
+
+
+	vim local.properties
+
+	sdk.dir=/Users/ericecheverri/Library/Android/sdk
+
+	ndk.dir=/Users/ericecheverri/Library/Android/sdk/ndk-bundle/
+
+Build without copying lib
+-------------------------
+
 The next step is to add the required BlueZ library file and the associated header files to the Android NDK. This is necessary because the NDK stable API doesn't include BlueZ.
 
 The easiest way to get the library file is to extract it from an existing Android device with the following command:
@@ -74,17 +87,10 @@ Generating Library
 
 	ndk-build
 
-	cp local.properties.example local.properties
 
 Building
 --------
 	
-	vim local.properties
-
-	sdk.dir=/Users/ericecheverri/Library/Android/sdk
-
-	ndk.dir=/Users/ericecheverri/Library/Android/sdk/ndk-bundle/
-
 
 Open a command-line and navigate to the root of your project directory. Then execute either `ant debug` or `ant release` to create the desired .apk file inside the projects `bin/` directory. If you use the release target, you also have to sign the .apk and then align it with `zipalign`.
 # bluetoothair
