@@ -67,16 +67,21 @@ Then copy the directory `lib/bluetooth` from the Android BlueZ code and the dire
     platforms/android-9/arch-arm/usr/include/
 
 
-
 Building
 --------
 
-cp local.prperties.example local.properties
+	cd /Users/ericecheverri/BlueCtrl/jni
 
-vim local.properties
+	ndk-build
 
-sdk.dir=/Users/ericecheverri/Library/Android/sdk
-ndk.dir=/Users/ericecheverri/Library/Android/sdk/ndk-bundle/
+	cp local.prperties.example local.properties
+
+	
+	vim local.properties
+
+	sdk.dir=/Users/ericecheverri/Library/Android/sdk
+
+	ndk.dir=/Users/ericecheverri/Library/Android/sdk/ndk-bundle/
 
 
 Open a command-line and navigate to the root of your project directory. Then execute either `ant debug` or `ant release` to create the desired .apk file inside the projects `bin/` directory. If you use the release target, you also have to sign the .apk and then align it with `zipalign`.
