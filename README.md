@@ -67,15 +67,17 @@ Then copy the directory `lib/bluetooth` from the Android BlueZ code and the dire
     platforms/android-9/arch-arm/usr/include/
 
 
-Building
---------
+Generating Library
+------------------
 
 	cd /Users/ericecheverri/BlueCtrl/jni
 
 	ndk-build
 
-	cp local.prperties.example local.properties
+	cp local.properties.example local.properties
 
+Building
+--------
 	
 	vim local.properties
 
