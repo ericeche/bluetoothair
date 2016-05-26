@@ -31,6 +31,16 @@ Build Requirements
 * Apache Ant
 
 
+To Skip Build Preparations
+--------------------------
+
+ Copy libs folder from this git repo to the root directory.
+
+libs
+└── armeabi
+    └── bluectrld
+
+1 directory, 1 file
 
 Build Preparations
 ------------------
@@ -43,14 +53,14 @@ The easiest way to get the library file is to extract it from an existing Androi
 
     adb pull /system/lib/libbluetooth.so
 
+
 After that put the extracted `libbluetooth.so` file to the following directory inside the Android NDK:
 
     platforms/android-9/arch-arm/usr/lib
 
 Now you must get the header files for the bluetooth and cutils includes. You can download them from the following two repositories from the CyanogenMod project:
 
-  https://github.com/CyanogenMod/android_external_bluetooth_bluez  
-  https://github.com/CyanogenMod/android_system_core  
+ copy android-9 to your sdk build directory
 
 Then copy the directory `lib/bluetooth` from the Android BlueZ code and the directory `include/cutils` from the Android System Core code to the following directory inside the Android NDK:
 
