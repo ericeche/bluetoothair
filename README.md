@@ -62,3 +62,4 @@ Building
 --------
 
 Open a command-line and navigate to the root of your project directory. Then execute either `ant debug` or `ant release` to create the desired .apk file inside the projects `bin/` directory. If you use the release target, you also have to sign the .apk and then align it with `zipalign`.
+# bluetoothair
